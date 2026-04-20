@@ -1,0 +1,7 @@
+    程序主入口为项目根目录下的main.py，安装依赖后直接运行即可。本想按照三层架构来做但用main.py的主循环来模拟前端后所有前端数据过滤操作都得写进
+主循环，导致程序入口逻辑有点多反而显得三层架构有点多余...但是已经做成这样了就懒得改了23333。还有本想通过main.py里的catch_global_exception修饰
+器来做全局异常处理，但发现这样捕获到异常后程序就跳出循环了，遂改为臃肿的嵌套式的try...except，图书信息通过dao层的类字典列表来存储，借助pypinyin库
+将书名转化为拼音再按照字典序排序，每次新增图书时进行一次排序维护列表顺序。当增加图书的编号id重复时抛出自定义的DuplicateKeyException异常来保
+证图书编号id的唯一性。Book对象通过继承pydantic的BaseModel类自动生成json化方法与构造方法以及完成参数校验等，每次对图书信息表进行增删改查自动调用
+book_file_utils工具同步本地books.json文件，可通过以books/books_template.json文件作为数据模板，将图书信息格式化为json列表并命名为
+books.json来批量导入图书信息，若不存在books.json，运行程序后，会自动调用book_file_utils工具创建books.json文件并初始化数据。
