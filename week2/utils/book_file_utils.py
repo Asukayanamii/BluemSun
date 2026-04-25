@@ -1,7 +1,7 @@
 import json
 import os
 
-from week2.utils import log
+from . import log
 
 
 def save_books_list(books_list : list):

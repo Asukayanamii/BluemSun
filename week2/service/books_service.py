@@ -1,7 +1,7 @@
-from week2.dao.books_dao import BooksDAO
-from week2.entity.book import Book
-from week2.exception.exceptions import BookNotFoundException
-from week2.utils import log
+from dao.books_dao import BooksDAO
+from entity.book import Book
+from exception.exceptions import BookNotFoundException
+from utils import log
 
 
 class BooksService:

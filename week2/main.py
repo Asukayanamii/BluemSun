@@ -1,8 +1,8 @@
-from week2.controller.books_controller import BooksController
-from week2.entity.book import Book
-from week2.exception.exceptions import BookNotFoundException, DuplicateKeyException
-from week2.service.books_service import BooksService
-from week2.utils import log
+from controller.books_controller import BooksController
+from entity.book import Book
+from exception.exceptions import BookNotFoundException, DuplicateKeyException
+from service.books_service import BooksService
+from utils import log
 
 def catch_global_exception(func):
     def wrapper(*args, **kwargs):

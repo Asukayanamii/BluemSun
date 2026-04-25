@@ -1,6 +1,8 @@
-from week2.entity.book import Book
-from week2.utils.book_file_utils import load_books_list, save_books_list
 from pypinyin import lazy_pinyin
+
+from entity.book import Book
+from utils.book_file_utils import load_books_list, save_books_list
+
 
 class BooksDAO:
     book_list = []

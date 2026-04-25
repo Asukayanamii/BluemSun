@@ -1,5 +1,5 @@
-from week2.entity.book import Book
-from week2.service.books_service import BooksService
+from entity.book import Book
+from service.books_service import BooksService
 
 
 class BooksController:
